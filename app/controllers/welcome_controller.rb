@@ -30,11 +30,15 @@ class WelcomeController < ApplicationController
 		### SETTING COLOURS ###
 		# do this code if mincol in randomtech is not 0
 		# if it is 0, means it is a tech with a set colour scheme
-		if @numcolours >= 1 && @randomtech.mincol != 0
+		if @numcolours >= 1 && @randomtech.maxcol != 0
 			puts "about to set colours"		
 			@numrandomcolour = rand(@randomtech.mincol...@randomtech.maxcol)	#the number of colours that are given
-			puts "set num colours at #{@numrandomcolour}"
+			puts "set num colours at"
+			puts @numrandomcolour
 
+			if @numrandomcolour.nil?
+					@numrandomcolour = 0
+			end
 			@randomcolourlist = Colour.random_colours(@numrandomcolour, @id)
 			puts @randomcolourlist			
 			puts "set colours ok"
