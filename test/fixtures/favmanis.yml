@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  label: MyString
+  numcol: 
+  numaccents: 
+  techid: 
+  colourid: 
+  accents: 
+
+two:
+  label: MyString
+  numcol: 
+  numaccents: 
+  techid: 
+  colourid: 
+  accents: 

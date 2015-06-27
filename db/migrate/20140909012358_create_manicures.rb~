@@ -1,0 +1,13 @@
+class CreateManicures < ActiveRecord::Migration
+  def change
+    create_table :manicures do |t|
+      t.integer :numcol
+      t.integer :numaccents
+      t.integer :techid
+      t.array :colourid
+      t.array :accents
+
+      t.timestamps
+    end
+  end
+end

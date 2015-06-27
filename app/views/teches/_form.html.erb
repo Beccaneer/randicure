@@ -1,0 +1,54 @@
+<%= form_for(@tech, html: {class: 'form-horizontal'}) do |f| %>
+  <% if @tech.errors.any? %>
+			<div class="alert alert-danger" role="alert">
+      <h4><%= pluralize(@tech.errors.count, "error") %> prohibited this tech from being saved:</h4>
+
+      <ul>
+      <% @tech.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+			</div>
+  <% end %>
+
+	<div class="form-group">
+    <label class="col-sm-2 control-label">Title</label> 
+		<div class="col-sm-6">
+    	<%= f.text_field :title, class: "form-control" %>
+ 		</div>
+	</div>
+
+
+ <div class="form-group">
+
+		<h4 class="col-sm-offset-2"> Number of colours </h4>
+    <label class="col-sm-2 control-label">Min</label>
+		<div class="col-sm-2"> 
+    	<%= f.text_field :mincol, class: "form-control" %>
+		</div>
+    <label class="col-sm-1 control-label">Max</label> 
+		<div class="col-sm-2"> 
+    	<%= f.text_field :maxcol, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group">
+
+		<h4 class="col-sm-offset-2"> Number of accents </h4>
+    <label class="col-sm-2 control-label">Min</label>
+		<div class="col-sm-2"> 
+    	<%= f.text_field :minaccents, class: "form-control" %>
+		</div>
+    <label class="col-sm-1 control-label">Max</label> 
+		<div class="col-sm-2"> 
+    	<%= f.text_field :maxaccents, class: "form-control" %>
+		</div>
+	</div>
+
+<br>
+<div class="col-sm-2">
+</div>
+<span class="col-sm-6">
+    <button type="submit" class="btn btn-primary">Submit</button>	
+		
+<% end %>

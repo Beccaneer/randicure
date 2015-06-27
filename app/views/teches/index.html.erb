@@ -1,0 +1,42 @@
+
+	<div class="pull-right">
+		<%= link_to '<i class="glyphicon glyphicon-plus"></i>'.html_safe, new_tech_path, class:"btn btn-default btn-lg"  %>
+	</div>
+<h1>Techniques</h1>
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+		<tr>
+			<th></th>
+			<th colspan="2"> Colours </th>
+			<th colspan="2"> Accents </th>
+    <tr>
+      <th>Title</th>
+			
+      <th>Min</th>
+      <th>Max</th>
+			
+      <th>Min</th>
+      <th>Max</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+		<% @userid = current_user.id %>
+		<% @techlist = Tech.where(user_id: @userid) %>
+    <% @techlist.each do |tech| %>
+      <tr>
+        <td><%= tech.title %></td>
+        <td><%= tech.mincol %></td>
+        <td><%= tech.maxcol %></td>
+        <td><%= tech.minaccents %></td>
+        <td><%= tech.maxaccents %></td>
+        <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_tech_path(tech) %></td>
+        <td><%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, tech, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>

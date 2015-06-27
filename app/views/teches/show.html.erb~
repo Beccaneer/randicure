@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tech.title %>
+</p>
+
+<p>
+  <strong>Mincol:</strong>
+  <%= @tech.mincol %>
+</p>
+
+<p>
+  <strong>Maxcol:</strong>
+  <%= @tech.maxcol %>
+</p>
+
+<p>
+  <strong>Minaccents:</strong>
+  <%= @tech.minaccents %>
+</p>
+
+<p>
+  <strong>Maxaccents:</strong>
+  <%= @tech.maxaccents %>
+</p>
+
+<%= link_to 'Edit', edit_tech_path(@tech) %> |
+<%= link_to 'Back', teches_path %>

@@ -1,0 +1,33 @@
+<h1>Listing manicures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numcol</th>
+      <th>Numaccents</th>
+      <th>Techid</th>
+      <th>Colourid</th>
+      <th>Accents</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manicures.each do |manicure| %>
+      <tr>
+        <td><%= manicure.numcol %></td>
+        <td><%= manicure.numaccents %></td>
+        <td><%= manicure.techid %></td>
+        <td><%= manicure.colourid %></td>
+        <td><%= manicure.accents %></td>
+        <td><%= link_to 'Show', manicure %></td>
+        <td><%= link_to 'Edit', edit_manicure_path(manicure) %></td>
+        <td><%= link_to 'Destroy', manicure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manicure', new_manicure_path %>

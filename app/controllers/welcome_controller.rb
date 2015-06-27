@@ -1,0 +1,96 @@
+class WelcomeController < ApplicationController
+
+  def index
+
+		# TODO add favorite,hated links
+		# TODO add button for generating new manicure?
+		# TODO create manicure & history
+		# TODO make colours unique 
+
+		### SETTING VARIABLES ###
+		@id=current_user.id #the current user
+		@user = User.find(@id)
+		@colourlist = Colour.where(user_id: @id)	#all colours belonging to user
+		@numcolours = @colourlist.size	#number of colours belonging to user
+		@techlist = Tech.where(user_id: @id)	#all techs belonging to user
+		@numtechs = @techlist.size	#number of techs belonging to user
+		@numaccents = 0
+		@notechflag = false; #does user have no techs?
+		@nocolflag = false;	#does user have enough colours for any of the techs?
+
+		### SETTING TECH ###
+		if @numtechs != 0
+			puts "about to set tech"
+			randomtechid = Tech.random_tech(@id)
+			@randomtech = Tech.where(id: randomtechid).first
+		else
+			@notechflag = true;		
+		end
+	
+		### SETTING COLOURS ###
+		# do this code if mincol in randomtech is not 0
+		# if it is 0, means it is a tech with a set colour scheme
+		if @numcolours >= 1 && @randomtech.mincol != 0
+			puts "about to set colours"		
+			@numrandomcolour = rand(@randomtech.mincol...@randomtech.maxcol)	#the number of colours that are given
+			puts "set num colours at #{@numrandomcolour}"
+
+			@randomcolourlist = Colour.random_colours(@numrandomcolour, @id)
+			puts @randomcolourlist			
+			puts "set colours ok"
+		elsif	@numcolours <= 0
+			@nocolflag == true		
+		end 
+
+		### SETTING ACCENTS ###
+		if @numtechs > 0 && @randomtech.maxaccents != 0
+			randomarray = [1,2,3,4,5,6,7,8,9,10]
+			@numaccents = rand(@randomtech.minaccents...@randomtech.maxaccents)
+			accents = randomarray.sample(@numaccents)
+			@accentlist = []
+			accents.each do |accent|
+				case accent
+					when 1
+						@accentlist <<"Left Pinky"
+					when 2
+						@accentlist <<"Left Ring"
+					when 3
+						@accentlist <<"Left Middle"
+					when 4
+						@accentlist <<"Left Index"
+					when 5
+						@accentlist <<"Left Thumb"
+					when 6
+						@accentlist <<"Right Thumb"
+					when 7
+						@accentlist <<"Right Index"
+					when 8
+						@accentlist <<"Right Middle"
+					when 9
+						@accentlist <<"Right Ring"
+					when 10
+						@accentlist <<"Right Pinky"
+				end
+			end
+		end
+		
+		puts "set accents ok"
+
+	end #def index
+
+=begin
+	def addfavmani
+		newmani = Manicure.where(user_id: @id).last
+		newfavmani = Favmani.new
+		newfavmani.colourid = newmani.colourid
+		newfavmani.techid = newmani.techid
+		newfavmani.accents = newmani.accents
+		newfavmani.save
+		if newfavmani.save
+			redirect_to action: "index", notice: 'Favmani was successfully created.' 
+		else
+			redirect_to action: "index", notice: 'Favmani was not saved.' 
+		end	
+	end
+=end
+end

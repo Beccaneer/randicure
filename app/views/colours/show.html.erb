@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brandname:</strong>
+  <%= @colour.brandname %>
+</p>
+
+<p>
+  <strong>Productname:</strong>
+  <%= @colour.productname %>
+</p>
+
+<p>
+  <strong>Colourname:</strong>
+  <%= @colour.colourname %>
+</p>
+
+<p>
+  <strong>Hexcode:</strong>
+  <%= @colour.hexcode %>
+</p>
+
+<%= link_to 'Edit', edit_colour_path(@colour) %> |
+<%= link_to 'Back', colours_path %>

@@ -1,0 +1,47 @@
+<%= form_for(@colour, html: {class: 'form-horizontal'}) do |f| %>
+  <% if @colour.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><%= pluralize(@colour.errors.count, "error") %> prohibited this colour from being saved:</h2>
+
+      <ul>
+      <% @colour.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="form-group">
+    <label class="col-sm-2 control-label">Brand</label> 
+		<div class="col-sm-6">
+    	<%= f.text_field :brandname, class: "form-control" %>
+ 		</div>
+	</div>
+
+	<div class="form-group">
+    <label class="col-sm-2 control-label">Product Line</label> 
+		<div class="col-sm-6">
+    	<%= f.text_field :productname, class: "form-control" %>
+ 		</div>
+	</div>
+  
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Colour Name</label> 
+		<div class="col-sm-6">
+    	<%= f.text_field :colourname, class: "form-control" %>
+ 		</div>
+	</div> 
+
+	<div class="form-group">
+    <label class="col-sm-2 control-label">Colour Family</label> 
+		<div class="col-sm-6">
+			<%= f.select( :colourfam,  @colour_family_list.each {|u| [u]}, {:include_blank => true}) %>
+ 		</div>
+	</div> 
+
+<div class="col-sm-2">
+</div>
+<span class="col-sm-6">
+    <button type="submit" class="btn btn-primary">Submit</button>	
+		
+<% end %>

@@ -1,0 +1,6 @@
+<h1>New tech</h1>
+
+<%= render 'form' %>
+
+<%= link_to '<button class= "btn btn-default">Back</button>'.html_safe, teches_path %>
+</span>

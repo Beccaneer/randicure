@@ -1,0 +1,2 @@
+module FavmanisHelper
+end

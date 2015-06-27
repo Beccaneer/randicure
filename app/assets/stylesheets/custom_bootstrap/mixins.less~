@@ -1,0 +1,11 @@
+// Use this file to override Twitter Bootstrap mixins or define own mixins.
+
+a { 
+    color:none;
+}
+
+@media (min-width: 768px) { 
+    .twoRow .navbar-collapse {
+        clear: left;
+    }
+}

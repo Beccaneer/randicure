@@ -1,0 +1,25 @@
+<%= form_for(@hatemani) do |f| %>
+  <% if @hatemani.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hatemani.errors.count, "error") %> prohibited this hatemani from being saved:</h2>
+
+      <ul>
+      <% @hatemani.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :techid %><br>
+    <%= f.text_field :techid %>
+  </div>
+  <div class="field">
+    <%= f.label :colourid %><br>
+    <%= f.text_field :colourid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

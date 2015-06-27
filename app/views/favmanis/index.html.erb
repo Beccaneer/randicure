@@ -1,0 +1,35 @@
+<h1>Listing favmanis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th>Numcol</th>
+      <th>Numaccents</th>
+      <th>Techid</th>
+      <th>Colourid</th>
+      <th>Accents</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favmanis.each do |favmani| %>
+      <tr>
+        <td><%= favmani.label %></td>
+        <td><%= favmani.numcol %></td>
+        <td><%= favmani.numaccents %></td>
+        <td><%= favmani.techid %></td>
+        <td><%= favmani.colourid %></td>
+        <td><%= favmani.accents %></td>
+        <td><%= link_to 'Show', favmani %></td>
+        <td><%= link_to 'Edit', edit_favmani_path(favmani) %></td>
+        <td><%= link_to 'Destroy', favmani, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Favmani', new_favmani_path %>

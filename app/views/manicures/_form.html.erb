@@ -1,0 +1,37 @@
+<%= form_for(@manicure) do |f| %>
+  <% if @manicure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@manicure.errors.count, "error") %> prohibited this manicure from being saved:</h2>
+
+      <ul>
+      <% @manicure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numcol %><br>
+    <%= f.text_field :numcol %>
+  </div>
+  <div class="field">
+    <%= f.label :numaccents %><br>
+    <%= f.text_field :numaccents %>
+  </div>
+  <div class="field">
+    <%= f.label :techid %><br>
+    <%= f.text_field :techid %>
+  </div>
+  <div class="field">
+    <%= f.label :colourid %><br>
+    <%= f.text_field :colourid %>
+  </div>
+  <div class="field">
+    <%= f.label :accents %><br>
+    <%= f.text_field :accents %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

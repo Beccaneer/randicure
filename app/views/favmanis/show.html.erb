@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @favmani.label %>
+</p>
+
+<p>
+  <strong>Numcol:</strong>
+  <%= @favmani.numcol %>
+</p>
+
+<p>
+  <strong>Numaccents:</strong>
+  <%= @favmani.numaccents %>
+</p>
+
+<p>
+  <strong>Techid:</strong>
+  <%= @favmani.techid %>
+</p>
+
+<p>
+  <strong>Colourid:</strong>
+  <%= @favmani.colourid %>
+</p>
+
+<p>
+  <strong>Accents:</strong>
+  <%= @favmani.accents.each do |accent| %>
+	<%= accent %>
+	<% end %>
+</p>
+
+<%= link_to 'Edit', edit_favmani_path(@favmani) %> |
+<%= link_to 'Back', favmanis_path %>

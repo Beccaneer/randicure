@@ -1,0 +1,27 @@
+<h1>Listing hatemanis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Techid</th>
+      <th>Colourid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hatemanis.each do |hatemani| %>
+      <tr>
+        <td><%= hatemani.techid %></td>
+        <td><%= hatemani.colourid %></td>
+        <td><%= link_to 'Show', hatemani %></td>
+        <td><%= link_to 'Edit', edit_hatemani_path(hatemani) %></td>
+        <td><%= link_to 'Destroy', hatemani, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hatemani', new_hatemani_path %>

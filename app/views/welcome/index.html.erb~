@@ -1,0 +1,54 @@
+<% if @numtechs == 0 %>
+	<div class="alert alert-warning">
+		<h4>You don't have any manicure techniques yet!</h4> 
+		<%= button_to "Add a technique", new_tech_path, class:"btn btn-warning", :method => :get %>
+	</div>
+<% elsif @numcolours >= 1 || @randomtech.maxcol == 0 %>
+<div id="generated">
+
+	<div class="pull-right">
+	<%= link_to '<i class="glyphicon glyphicon-refresh"></i>'.html_safe, root_path, class:"btn btn-default btn-lg"  %>
+	</div>
+	<h1><%= @randomtech.title %></h1>
+	
+	<ul>
+	<% if @randomtech.maxcol != 0 %>	
+	<br>
+	<table class="table table-striped">
+		
+		<% @randomcolourlist.each do |colour| %>
+				<tr>
+				<td><%= colour.brandname %></td>
+				<td><%= colour.colourname %></td>
+				<td><%= colour.productname %></td>
+				</tr>
+		<% end %>
+	<% end %>
+	</table>
+	
+	<% if @numaccents > 0 %>
+		<h3>Accents</h3>
+		<ul class="list-inline">
+		<% @accentlist.each do |accent| %>
+			<li><%= accent %></li>
+		<% end %>
+		</ul>
+	<% else %>
+		<h5>(No accents)</h5>
+	<% end %> 	
+	</ul>
+<br>
+</div>
+
+<% else %>
+<div class="alert alert-warning">
+		<h4>You don't have any polishes yet!</h4> 
+		<%= button_to "Add a polish", new_colour_path, class:"btn btn-warning", :method => :get %>
+	</div>
+<% end %>
+
+<!-- <input type="button" onclick="window.location = '/addfavmani'"> -->
+
+</p>
+
+
