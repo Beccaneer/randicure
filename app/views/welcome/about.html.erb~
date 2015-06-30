@@ -1,0 +1,31 @@
+<h1>About Randicure</h1>
+<br>
+<h3> What is Randicure?</h3>
+<p>Randicure stands for 'random manicure' and randomly determines how you should paint your nails!
+	<br>
+	<br>
+	A Randicure is reliant on two things: the polishes you have in your collection, and the techniques you want to paint.
+	You can add or edit these by using the links at the top.
+</p>
+<h3> How does Randicure work?</h3>
+	<p>
+		Randicure first randomly picks which technique you should use to paint your nails, then randomly determines which colours you should use
+		and which accents you should have based on the settings for that particular technique.
+		<br>
+		<br>
+		Note there are some techniques that might have a set colour scheme and you don't want to generate colours for (eg. a galaxy manicure), in this
+		case you can simply set both min and max number of colours to 0, and Randicure won't give you specific polish suggestions. 
+	</p>
+<h3> Look for these Randicure features in the near future! </h3>
+	<p> I plan on continuing to work on Randicure as long as I have time to. 
+		<br>
+		Here are some features I plan on implementing:
+		<ul>
+			<li>Ability to blacklist randicures</li>
+			<li>Ability to favourite randicures</li>
+			<li>Randicure history</li>
+			<li>Polish quick add</li>
+			<li>Add polishes by colour swatch</li>
+		</ul>
+		<strong>Want something not seen here? E-mail randicure@gmail.com</strong>
+	</p>

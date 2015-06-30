@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Randicure</title>
+  <title>Something went wrong!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -33,7 +33,6 @@
             <ul class="nav navbar-nav">
                 <li><%= link_to 'Polishes', colours_path %></li>
                 <li><%= link_to 'Techniques', teches_path %></li>
-								<li><%= link_to 'About', about_path %></li>
             </ul>
 						<% else %>
 						<div class="nav navbar-nav navbar-right">
@@ -44,33 +43,6 @@
         </div>
     </div>
 </div>
-
-
-
-<div class="row">
-  <div class="col-md-1"></div>
-	<div class="col-md-1"></div>
-	<div class="col-md-1"></div>
-  <div class="col-md-6">
-		<% if notice %>
-  		<p class="alert alert-success"><%= notice %></p>
-		<% end %>
-		<% if alert %>
-  		<p class="alert alert-danger" role="alert"><%= alert %></p>
-		<% end %>
-			<%= yield %>
-	</div>
-	<div class="col-md-1"></div>
-	<div class="col-md-1"></div>
-  <div class="col-md-1"></div>
-</div>
-
-<!--
-<footer class="footer navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-    </footer>
--->
+Sorry but something went wrong! 
 </body>
 </html>

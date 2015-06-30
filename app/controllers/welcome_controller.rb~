@@ -36,6 +36,9 @@ class WelcomeController < ApplicationController
 			puts "set num colours at"
 			puts @numrandomcolour
 
+			if @numrandomcolour.nil?
+					@numrandomcolour = 0
+			end
 			@randomcolourlist = Colour.random_colours(@numrandomcolour, @id)
 			puts @randomcolourlist			
 			puts "set colours ok"
