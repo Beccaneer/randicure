@@ -14,7 +14,7 @@
 	<div class="form-group">
     <label class="col-sm-2 control-label">Title</label> 
 		<div class="col-sm-6">
-    	<%= f.text_field :title, class: "form-control" %>
+    	<%= f.text_field :title, class: "form-control", :maxlength => 100, :size => 40 %>
  		</div>
 	</div>
 
@@ -24,11 +24,11 @@
 		<h4 class="col-sm-offset-2"> Number of colours </h4>
     <label class="col-sm-2 control-label">Min</label>
 		<div class="col-sm-2"> 
-    	<%= f.text_field :mincol, class: "form-control" %>
+    	<%= f.text_field :mincol, class: "form-control", :maxlength => 2, :size => 4 %>
 		</div>
     <label class="col-sm-1 control-label">Max</label> 
 		<div class="col-sm-2"> 
-    	<%= f.text_field :maxcol, class: "form-control" %>
+    	<%= f.text_field :maxcol, class: "form-control", :maxlength => 2, :size => 4  %>
 		</div>
 	</div>
 
@@ -37,11 +37,11 @@
 		<h4 class="col-sm-offset-2"> Number of accents </h4>
     <label class="col-sm-2 control-label">Min</label>
 		<div class="col-sm-2"> 
-    	<%= f.text_field :minaccents, class: "form-control" %>
+    	<%= f.text_field :minaccents, class: "form-control", :maxlength => 2, :size => 4  %>
 		</div>
     <label class="col-sm-1 control-label">Max</label> 
 		<div class="col-sm-2"> 
-    	<%= f.text_field :maxaccents, class: "form-control" %>
+    	<%= f.text_field :maxaccents, class: "form-control", :maxlength => 2, :size => 4  %>
 		</div>
 	</div>
 

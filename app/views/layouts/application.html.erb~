@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Randicure</title>
+  <title>Randicure - Your random manicurist!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -45,12 +45,13 @@
     </div>
 </div>
 
-
-
+<div class="container-fluid">
 <div class="row">
+
   <div class="col-md-1"></div>
 	<div class="col-md-1"></div>
 	<div class="col-md-1"></div>
+
   <div class="col-md-6">
 		<% if notice %>
   		<p class="alert alert-success"><%= notice %></p>
@@ -60,9 +61,12 @@
 		<% end %>
 			<%= yield %>
 	</div>
+
 	<div class="col-md-1"></div>
 	<div class="col-md-1"></div>
   <div class="col-md-1"></div>
+
+</div>
 </div>
 
 <!--

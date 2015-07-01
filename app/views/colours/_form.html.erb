@@ -14,21 +14,21 @@
 	<div class="form-group">
     <label class="col-sm-2 control-label">Brand</label> 
 		<div class="col-sm-6">
-    	<%= f.text_field :brandname, class: "form-control" %>
+    	<%= f.text_field :brandname, class: "form-control", :maxlength => 100, :size => 40 %>
  		</div>
 	</div>
 
 	<div class="form-group">
     <label class="col-sm-2 control-label">Product Line</label> 
 		<div class="col-sm-6">
-    	<%= f.text_field :productname, class: "form-control" %>
+    	<%= f.text_field :productname, class: "form-control", :maxlength => 100, :size => 40 %>
  		</div>
 	</div>
   
   <div class="form-group">
     <label class="col-sm-2 control-label">Colour Name</label> 
 		<div class="col-sm-6">
-    	<%= f.text_field :colourname, class: "form-control" %>
+    	<%= f.text_field :colourname, class: "form-control", :maxlength => 100, :size => 40 %>
  		</div>
 	</div> 
 

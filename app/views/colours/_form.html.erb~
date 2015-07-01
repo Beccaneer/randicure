@@ -14,7 +14,7 @@
 	<div class="form-group">
     <label class="col-sm-2 control-label">Brand</label> 
 		<div class="col-sm-6">
-    	<%= f.text_field :brandname, class: "form-control" %>
+    	<%= f.text_field :brandname, class: "form-control", :maxlength => 15, :size => 40 %>
  		</div>
 	</div>
 
@@ -35,7 +35,7 @@
 	<div class="form-group">
     <label class="col-sm-2 control-label">Colour Family</label> 
 		<div class="col-sm-6">
-			<%= f.select( :colourfam,  @colour_family_list.each {|u| [u]}, {:include_blank => true}) %>
+			<%= f.select( :colourfam,  @colour_family_list.each {|u| [u]}, {:include_blank => true})%>
  		</div>
 	</div> 
 
