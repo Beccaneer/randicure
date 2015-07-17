@@ -9,6 +9,7 @@
       <th>Brand</th>
       <th>Product line</th>
       <th>Colour name</th>
+			<th colspan="1"></th>
 			<th>Colour family</th>
       <th colspan="2"></th>
     </tr>
@@ -20,7 +21,20 @@
         <td><%= colour.brandname %></td>
         <td><%= colour.productname %></td>
         <td><%= colour.colourname %></td>
+
+				<% if colour.hexcode.present? %>
+					<td>
+						<svg height="20" width="20">
+						<circle cx="10" cy="10" r="9" stroke="black" stroke-width="1" fill="#<%= colour.hexcode %>" />
+						</svg>
+					</td>
+					<!-- <td style="width:50px;height:30px;background: #<%= colour.hexcode %>;" class="centered-text"> -->
+				<% else %>
+					<td></td>
+				<% end %>
+
 				<td><%= colour.colourfam %></td>
+				
         <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_colour_path(colour) %></td>
         <td><%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, colour, method: :delete, data: { confirm: 'Are you sure you want to delete this polish?' } %></td>
       </tr>

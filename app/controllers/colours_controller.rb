@@ -14,15 +14,16 @@ class ColoursController < ApplicationController
   def show
   end
 
+	# TODO: colour_family_list is not loading if user gives invalid hex code
   # GET /colours/new
   def new
-		@colour_family_list = ['Blue','Green','Yellow','Orange','Red','Purple','White','Brown','Black','Grey']
+		@colour_family_list = ['Blue','Green','Yellow','Orange','Red','Purple','White','Brown','Black','Grey','Metallic']
     @colour = Colour.new
   end
 
   # GET /colours/1/edit
   def edit
-		@colour_family_list = ['Blue','Green','Yellow','Orange','Red','Purple','White','Brown','Black','Grey']
+		@colour_family_list = ['Blue','Green','Yellow','Orange','Red','Purple','White','Brown','Black','Grey','Metallic']
   end
 
   # POST /colours

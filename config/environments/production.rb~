@@ -13,8 +13,8 @@ Rails.application.configure do
 	Rails.application.config.middleware.use ExceptionNotification::Rack,
   :email => {
     :email_prefix => "[PREFIX] ",
-    :sender_address => %{"notifier" <notifier@example.com>},
-    :exception_recipients => %w{exceptions@example.com}
+    :sender_address => %{"exception notifier" <randicure@gmail.com>},
+    :exception_recipients => %w{randicure@gmail.com}
   }
 
   # Code is not reloaded between requests.

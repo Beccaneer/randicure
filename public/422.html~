@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>This page is gone!</title>
+  <title>Change not saved</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
@@ -59,10 +59,11 @@
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
+  <!-- This file lives in public/422.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, this page is gone. (404)</h1>
+      <h1>We're sorry, your change wasn't saved(422)</h1>
+     
     </div>
      <p><a href="randicure.herokuapp.com">Home</a></p>
   </div>

@@ -32,7 +32,7 @@ class WelcomeController < ApplicationController
 		# if it is 0, means it is a tech with a set colour scheme
 		if @numcolours >= 1 && @randomtech.maxcol != 0
 			puts "about to set colours"		
-			@numrandomcolour = rand(@randomtech.mincol...@randomtech.maxcol)	#the number of colours that are given
+			@numrandomcolour = rand(@randomtech.mincol..@randomtech.maxcol)	#the number of colours that are given
 			puts "set num colours at"
 			puts @numrandomcolour
 
@@ -49,7 +49,7 @@ class WelcomeController < ApplicationController
 		### SETTING ACCENTS ###
 		if @numtechs > 0 && @randomtech.maxaccents != 0
 			randomarray = [1,2,3,4,5,6,7,8,9,10]
-			@numaccents = rand(@randomtech.minaccents...@randomtech.maxaccents)
+			@numaccents = rand(@randomtech.minaccents..@randomtech.maxaccents)
 			accents = randomarray.sample(@numaccents)
 			@accentlist = []
 			accents.each do |accent|

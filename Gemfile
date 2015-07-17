@@ -22,6 +22,8 @@ gem 'coffee-rails', '~> 4.0.0'
  gem 'less-rails-bootstrap'
  gem 'exception_notification'
 
+ gem 'jquery-simplecolorpicker-rails'
+
  gem 'rails_12factor', group: :production
 
 # Use jquery as the JavaScript library

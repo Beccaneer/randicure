@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The change you wanted was rejected (422)</title>
+  <title>Change not saved</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
@@ -51,6 +51,10 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+	 div.dialog > p > a {
+		color: red;
+	}
   </style>
 </head>
 
@@ -58,10 +62,10 @@
   <!-- This file lives in public/422.html -->
   <div class="dialog">
     <div>
-      <h1>The change you wanted was rejected.</h1>
-      <p>Maybe you tried to change something you didn't have access to.</p>
+      <h1>We're sorry, your change wasn't saved (422)</h1>
+     
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+     <p><a href="randicure.herokuapp.com">Home</a></p>
   </div>
 </body>
 </html>

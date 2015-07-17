@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
  gem 'will_paginate'
  gem "cancan"
  gem 'less-rails-bootstrap'
+ gem 'exception_notification'
 
  gem 'rails_12factor', group: :production
 
