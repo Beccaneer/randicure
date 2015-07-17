@@ -18,9 +18,6 @@
 //= require jquery.validate.additional-methods
 //= require twitter/bootstrap
 //= require turbolinks
-//= require jquery.simplecolorpicker.js
 //= require_tree .
 
- jQuery(document).ready(function(){
-       jQuery('#print_colorpaper').simplecolorpicker();
- });
+
