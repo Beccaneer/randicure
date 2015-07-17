@@ -10,12 +10,7 @@ Rails.application.configure do
 	config.action_mailer.perform_deliveries = true
 	config.action_mailer.raise_delivery_errors = true
 
-	Rails.application.config.middleware.use ExceptionNotification::Rack,
-  :email => {
-    :email_prefix => "[PREFIX] ",
-    :sender_address => %{"exception notifier" <randicure@gmail.com>},
-    :exception_recipients => %w{randicure@gmail.com}
-  }
+	
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
