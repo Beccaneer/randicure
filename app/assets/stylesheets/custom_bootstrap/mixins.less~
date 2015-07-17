@@ -25,7 +25,7 @@ html body{
 
 .brand-font{
 	font-family: 'Lobster', serif;
-	font-size: x-large;
+	font-size: xx-large;
 }
 
 .col-md-8{
