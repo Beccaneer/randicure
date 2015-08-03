@@ -1,5 +1,5 @@
 <div class="col-md-1"></div>
-<div class="generated col-md-6">
+<div class="generated col-md-8">
 <h1>About Randicure</h1>
 <br>
 <h3> What is Randicure?</h3>
@@ -32,7 +32,7 @@
 			<li>Add polishes by colour swatch</li>
 			<li>Better display on mobile</li>
 		</ul>
-		<strong>Want something not seen here? <a href="mailto:randicure@gmail.com.com?Subject=Feature%20Suggestion" target="_top">Send us an e-mail!</a></strong>
+		<strong>Want something not seen here? <a href="mailto:randicure@gmail.com.com?Subject=Feature%20Suggestion" target="_top" class="text-link">Send us an e-mail.</a></strong>
 	</p>
 </div>
 
