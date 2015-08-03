@@ -1,4 +1,5 @@
-<div class="generated">
+<div class="col-md-1"></div>
+<div class="generated col-md-6">
 <h1>About Randicure</h1>
 <br>
 <h3> What is Randicure?</h3>
@@ -19,7 +20,7 @@
 		case you can simply set both min and max number of colours to 0, and Randicure won't give you specific polish suggestions. 
 	</p>
 <hr>
-<h3> Look for these Randicure features in the near future! </h3>
+<h3> Upcoming Randicure features </h3>
 	<p> I plan on continuing to work on Randicure as long as I have time to. 
 		<br>
 		Here are some features I plan on implementing:
@@ -34,4 +35,4 @@
 		<strong>Want something not seen here? <a href="mailto:randicure@gmail.com.com?Subject=Feature%20Suggestion" target="_top">Send us an e-mail!</a></strong>
 	</p>
 </div>
-<br>
+
