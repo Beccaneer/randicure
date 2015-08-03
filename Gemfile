@@ -12,7 +12,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
- gem 'therubyracer',  platforms: :ruby
  gem 'jquery-validation-rails', '~> 1.13.1'
  gem 'jquery-datatables-rails', '~> 3.3.0'
  gem 'jquery-ui-rails'
@@ -21,6 +20,9 @@ gem 'coffee-rails', '~> 4.0.0'
  gem "cancan"
  gem 'less-rails-bootstrap'
  gem 'exception_notification'
+
+gem 'libv8', '3.16.14.11'
+gem 'therubyracer', '0.12.2', platforms: :ruby
 
  gem 'jquery-simplecolorpicker-rails'
  gem 'rails_12factor', group: :production
