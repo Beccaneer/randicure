@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
  gem 'less-rails-bootstrap'
  gem 'exception_notification'
 
-gem 'libv8', '3.16.14.11'
+
 group :development do
   gem 'therubyracer', '0.10.2', :platforms => :ruby
 end
