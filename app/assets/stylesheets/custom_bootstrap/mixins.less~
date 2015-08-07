@@ -13,6 +13,8 @@ a.text-link{
 
 .text-link:hover{
 	text-decoration: none;
+	color: #FF5252;
+	background-color: transparent;
 }
 
 .navbar-brand{
@@ -22,6 +24,10 @@ a.text-link{
 
 .navbar {
     margin-bottom: 0;
+}
+
+.logo {
+	margin-right: 5vw;
 }
 
 .container-fluid {
@@ -42,6 +48,9 @@ a.text-link{
 	background-color: #FFFFFF;
 }
 
+.tall-text{
+	background-color: #FFFFFF;
+}
 
 .glyphicon:hover{
 	background-color: transparent;
