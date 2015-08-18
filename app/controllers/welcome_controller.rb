@@ -39,6 +39,7 @@ class WelcomeController < ApplicationController
 			if @numrandomcolour.nil?
 					@numrandomcolour = 0
 			end
+
 			@randomcolourlist = Colour.random_colours(@numrandomcolour, @id)
 			puts @randomcolourlist			
 			puts "set colours ok"
@@ -48,7 +49,7 @@ class WelcomeController < ApplicationController
 
 		### SETTING ACCENTS ###
 		if @numtechs > 0 && @randomtech.maxaccents != 0
-			randomarray = [1,2,3,4,5,6,7,8,9,10]
+			randomarray = [1,2,3,4,5,6,7,8,9,10] # each corresponds to a finger (see cases below)
 			@numaccents = rand(@randomtech.minaccents..@randomtech.maxaccents)
 			accents = randomarray.sample(@numaccents)
 			@accentlist = []
@@ -82,21 +83,8 @@ class WelcomeController < ApplicationController
 
 	end #def index
 
-=begin
-	def addfavmani
-		newmani = Manicure.where(user_id: @id).last
-		newfavmani = Favmani.new
-		newfavmani.colourid = newmani.colourid
-		newfavmani.techid = newmani.techid
-		newfavmani.accents = newmani.accents
-		newfavmani.save
-		if newfavmani.save
-			redirect_to action: "index", notice: 'Favmani was successfully created.' 
-		else
-			redirect_to action: "index", notice: 'Favmani was not saved.' 
-		end	
-	end
-=end
+	### for the about page ###
 	def about
 	end
+
 end

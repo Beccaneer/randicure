@@ -5,17 +5,15 @@
 	</div>
 
 <% elsif @numcolours >= 1 || @randomtech.maxcol == 0 %>
-<div id="generated">
-
+	<div id="generated">
 	<div class="pull-right">
-	<%= link_to '<i class="glyphicon glyphicon-refresh"></i>'.html_safe, root_path, class:"btn btn-default btn-lg"  %>
+		<%= link_to '<i class="glyphicon glyphicon-refresh"></i>'.html_safe, root_path, class:"btn btn-default btn-lg"  %>
 	</div>
 	<h1><%= @randomtech.title %></h1>
-	
 	<ul>
-	<% if @randomtech.maxcol != 0 %>	
-	<br>
-	<table class="table table-striped table-responsive">
+		<% if @randomtech.maxcol != 0 %>	
+		<br>
+		<table class="table table-striped table-responsive">
 		
 		<% @randomcolourlist.each do |colour| %>
 				<tr>
@@ -58,8 +56,6 @@
 	</div>
 <% end %>
 
-<!-- <input type="button" onclick="window.location = '/addfavmani'"> -->
 
-</p>
 
 

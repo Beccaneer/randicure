@@ -12,21 +12,19 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
- gem 'jquery-validation-rails', '~> 1.13.1'
- gem 'jquery-datatables-rails', '~> 3.3.0'
- gem 'jquery-ui-rails'
- gem 'rails_admin'
- gem 'will_paginate'
- gem "cancan"
- gem 'less-rails-bootstrap'
- gem 'exception_notification'
-
-
-  gem 'therubyracer', '0.12.2', :platforms => :ruby
-
- gem 'jquery-simplecolorpicker-rails'
- gem 'rails_12factor', group: :production
-
+gem 'jquery-validation-rails', '~> 1.13.1'
+gem 'jquery-datatables-rails', '~> 3.3.0'
+gem 'jquery-ui-rails'
+gem 'rails_admin'
+gem 'will_paginate'
+gem "cancan"
+gem 'less-rails-bootstrap'
+gem 'exception_notification'
+gem 'therubyracer', '0.12.2', :platforms => :ruby
+gem 'jquery-simplecolorpicker-rails'
+gem 'rails_12factor', group: :production
+gem 'devise'
+gem 'simple_form', '3.1.0.rc2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,8 +38,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'devise'
-gem 'simple_form', '3.1.0.rc2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

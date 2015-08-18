@@ -22,9 +22,8 @@ gem 'coffee-rails', '~> 4.0.0'
  gem 'exception_notification'
 
 
-group :development do
-  gem 'therubyracer', '0.10.2', :platforms => :ruby
-end
+  gem 'therubyracer', '0.12.2', :platforms => :ruby
+
  gem 'jquery-simplecolorpicker-rails'
  gem 'rails_12factor', group: :production
 

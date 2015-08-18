@@ -6,17 +6,17 @@ get 'welcome/index'
 
   resources :users
 
-  resources :hatemanis
+  resources :hatemanis, only: []
 
-  resources :favmanis
+  resources :favmanis, only: []
 
-  resources :manicures
+  resources :manicures, only: []
 
-  resources :tutorials
+  resources :tutorials, only: []
 
-  resources :teches
+  resources :teches, except: [:show] 
 
-  resources :colours
+  resources :colours, except: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
